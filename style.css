@@ -1,6 +1,40 @@
-body{
-    margin: 0;
-    padding: 0;
+:root {
+  --primary-color: #222;
+  --secondary-color: #fff;
+}
+
+html {
+  transition: all 0.5s ease-in-out;
+}
+
+html.dark {
+  --primary-color: #fff;
+  --secondary-color: #333;
+}
+
+html.dark {
+  background-color: #222;
+  color: var(--primary-color);
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.btncontain {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.toggle {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+  padding: 0.5rem 0.8rem;
+  position: relative;
+  top: 15%;
 }
 
 #clockContainer {
@@ -10,7 +44,7 @@ body{
     /* margin-left: 10px; */
     height: 40vw;
     width: 35vw;
-    background-image: url("clock.png");
+    background-image: url("clock1.png");
     background-repeat: no-repeat;
     background-size: 100%;
 }
