@@ -1,20 +1,28 @@
-#clockContainer{
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#clockContainer {
     position: relative;
     margin: auto;
+    margin-top: 69px;
+    /* margin-left: 10px; */
     height: 40vw;
     width: 35vw;
-    background-image:url("clock.png");
-    background-repeat:  no-repeat;
+    background-image: url("clock.png");
+    background-repeat: no-repeat;
     background-size: 100%;
 }
-#hour,#minute,#second{
+
+#hour, #minute, #second {
     position: absolute;
-    background:green;
+    background: green;
     border-radius: 10px;
     transform-origin: bottom;
 }
 
-#hour{
+#hour {
     width: 2%;
     height: 15%;
     top: 30%;
@@ -22,27 +30,18 @@
     opacity: 0.8;
 }
 
-
-
-#minute{
+#minute {
     width: 2%;
     height: 20%;
     top: 25%;
     left: 49.2%;
     opacity: 0.8;
-    
-
-    
-    
-
-
 }
-#second{
+
+#second {
     width: 1%;
     height: 28%;
     top: 17%;
     left: 49.4%;
     opacity: 0.8;
-
-    
 }
