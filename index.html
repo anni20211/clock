@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +8,31 @@
     <title>clock using js</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div id="clockContainer">
-        <div id="hour"></div>
-        <div id="minute"></div>
-        <div id="second"></div>
-    </div>
+
+    <main>
+
+        <div class="time">
+            <div class="hour" id = "hr" style="color: yellow;">00</div>
+            <div class="minutes" id="min" style="color: rgb(0, 255, 0)">00</div>
+            <div class="seconds" id="sec" style="color: rgb(255, 0, 115);">00</div>
+            <div class="ampm" id ='ampm'>AM</div>
+        </div>
+
+        <div id="clockContainer">
+            <div class="circle"></div>
+            <div id="hour" style="background-color: yellow;"></div>
+            <div id="minute" style="background-color: rgb(0, 255, 0);"></div>
+            <div id="second" style="background-color: rgb(255, 0, 115);"></div>
+        </div>
+
+
+    </main>
+
+
     <script src="script.js"></script>
 
 </body>
+
 </html>

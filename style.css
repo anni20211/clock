@@ -1,31 +1,50 @@
 body{
     margin: 0;
     padding: 0;
+    /* background:rgba(8, 62, 138, 0.767) ; */
+    background: rgb(21,84,131);
+    background: linear-gradient(90deg, rgba(21,84,131,1) 0%, rgba(212,111,137,1) 94%);
+}
+main{
+    margin-top: 5%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #clockContainer {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: auto;
     margin-top: 69px;
     /* margin-left: 10px; */
-    height: 40vw;
-    width: 35vw;
+    height: 30vw;
+    width: 30vw;
     background-image: url("clock.png");
     background-repeat: no-repeat;
     background-size: 100%;
+    box-shadow: 3px 10px 3px rgb(0, 0, 0.5);
+    border: 2px solid white;
+    border-radius: 50% 50% 50%;
 }
 
 #hour, #minute, #second {
     position: absolute;
-    background: green;
+    background: rgb(0, 0, 0);
     border-radius: 10px;
     transform-origin: bottom;
+    box-shadow: 3px 3px 3px rgb(0, 0, 0.5);
 }
 
 #hour {
     width: 2%;
     height: 15%;
-    top: 30%;
+    top: 35.5%;
     left: 49.2%;
     opacity: 0.8;
 }
@@ -33,7 +52,7 @@ body{
 #minute {
     width: 2%;
     height: 20%;
-    top: 25%;
+    top: 30%;
     left: 49.2%;
     opacity: 0.8;
 }
@@ -41,7 +60,68 @@ body{
 #second {
     width: 1%;
     height: 28%;
-    top: 17%;
+    top: 22.8%;
     left: 49.4%;
     opacity: 0.8;
+}
+
+
+.circle{
+    position: absolute;
+    width: 3%;
+    height: 3%;
+    border-radius: 50%;
+    /* border: 1px solid white; */
+    background-color: black;
+}
+
+.time{
+    /* margin-left: 40%; */
+    display: flex;
+    padding: 10px 20px;
+    font-size: 2em;
+    font-family: 600;
+    border: 2px solid white;
+    border-radius: 40px;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0.5);
+    width: 200px;
+    color: white;
+    gap: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.time div{
+    position: relative;
+    width: 60px;
+    text-align: center;
+    font-weight: 500;
+    text-shadow: 3px 3px 3px rgb(0, 0, 0.5);
+}
+
+.time div:nth-child(1)::after,
+.time div:nth-child(2)::after{
+    content: ":";
+    position: absolute;
+}
+
+.time div:last-child{
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.time div:nth-child(1)::after,
+.time div:nth-child(2)::after{
+    animation: animate 1s steps(1) infinite;
+}
+
+@keyframes animate{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
 }
