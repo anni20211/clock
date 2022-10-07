@@ -17,31 +17,44 @@ body{
 
 #hour, #minute, #second {
     position: absolute;
-    background: green;
+    background: black;
     border-radius: 10px;
     transform-origin: bottom;
 }
 
+#circle {
+    position: absolute;
+    background: black;
+    border-radius: 50%;
+    width: 7%;
+    height: 6%;
+    top: 40.6%;
+    left: 46.3%;
+    /* opacity: 0.4; */
+}
 #hour {
     width: 2%;
     height: 15%;
-    top: 30%;
-    left: 49.2%;
+    top: 29.4%;
+    left: 48.8%;
     opacity: 0.8;
 }
 
 #minute {
+    background: blue;
     width: 2%;
     height: 20%;
-    top: 25%;
-    left: 49.2%;
+    top: 24.4%;
+    left: 48.8%;
     opacity: 0.8;
 }
 
 #second {
+    background: red;
     width: 1%;
     height: 28%;
-    top: 17%;
-    left: 49.4%;
+    top: 16.3%;
+    left: 49.2%;
     opacity: 0.8;
 }
+
