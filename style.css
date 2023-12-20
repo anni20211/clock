@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    background: linear-gradient(45deg, #FFD700, #3498db, #e74c3c);
 }
 
 #clockContainer {
@@ -10,16 +11,21 @@ body{
     /* margin-left: 10px; */
     height: 40vw;
     width: 35vw;
+    background: none;
     background-image: url("clock.png");
     background-repeat: no-repeat;
     background-size: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 #hour, #minute, #second {
     position: absolute;
-    background: green;
     border-radius: 10px;
     transform-origin: bottom;
+    transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 #hour {
@@ -28,6 +34,7 @@ body{
     top: 30%;
     left: 49.2%;
     opacity: 0.8;
+    background-color: #4CAF50;
 }
 
 #minute {
@@ -36,6 +43,7 @@ body{
     top: 25%;
     left: 49.2%;
     opacity: 0.8;
+    background-color: #3498db;
 }
 
 #second {
@@ -44,4 +52,24 @@ body{
     top: 17%;
     left: 49.4%;
     opacity: 0.8;
+    background-color: #e74c3c;
+}
+
+#clockContainer:hover {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+#clockContainer:hover #hour {
+    transform: scale(1.1);
+    background-color: #FFD700;
+}
+
+#clockContainer:hover #minute {
+    transform: scale(1.1);
+    background-color: #FFA500;
+}
+
+#clockContainer:hover #second {
+    transform: scale(1.1);
+    background-color: #FF6347;
 }
